@@ -18,7 +18,7 @@ const WorkExperience = () => {
           </div>
         </div>
         {/* 오른쪽 영역 */}
-        <div className="w-[70%]">ddddddddddddd</div>
+        <div className="w-[70%]">ㅅㅅㅅㅅㅅ</div>
       </div>
     </section>
   );
