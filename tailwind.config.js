@@ -13,5 +13,13 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        "::selection": {
+          backgroundColor: 'theme("colors.light2")',
+        },
+      });
+    },
+  ],
 };
