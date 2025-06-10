@@ -4,11 +4,11 @@ import TextChip from "./ui/TextChip";
 const WorkExperience = () => {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-primary">Work Experience</h2>
+      <h2 className="text-3xl font-bold text-primary">Work Experiences</h2>
       <Spacer height={30} />
       <div className="flex gap-[40px]">
         {/* 왼쪽 영역 */}
-        <div className="w-[20%] flex flex-col gap-[25px]">
+        <div className="w-[20%] flex flex-col gap-[25px] select-none">
           <span className="text-2xl font-bold">(주)윤회</span>
           <div className="flex flex-col">
             <span className="text-md leading-[1.2]">
@@ -24,7 +24,6 @@ const WorkExperience = () => {
             패션 브랜드 디지털제품여권(DPP) 랜딩페이지 개발
           </span>
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[요약]</span>
             <span className="text-lg leading-[1.5]">
               의류 제품의 라벨에 있는 DPP QR 코드 스캔 시 사용자가 접속하는 랜딩
               페이지를 개발했습니다. 다양한 브랜드의 확장을 염두에 두어, 많은

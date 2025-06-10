@@ -1,7 +1,7 @@
 const Divider = ({ gap }: { gap: number }) => {
   return (
     <div
-      className="bg-divider"
+      className="bg-gray-200"
       style={{
         height: "1px",
         marginTop: `${gap}px`,

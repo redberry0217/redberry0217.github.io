@@ -6,7 +6,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 const Links = () => {
   const CONTACT_STYLE =
-    "cursor-pointer flex gap-[5px] items-center justify-center hover:bg-gray-100 rounded-full transition-colors p-2";
+    "cursor-pointer flex gap-[5px] items-center justify-center hover:bg-white rounded-full transition-colors px-2 py-1";
 
   const handleClickPasteItem = (href: string) => {
     navigator.clipboard.writeText(href);
@@ -14,9 +14,9 @@ const Links = () => {
   };
 
   return (
-    <main className="flex gap-[5px] py-[30px] text-md justify-between">
+    <main className="flex gap-[5px] pt-[30px] text-md justify-between">
       <section className="flex gap-[10px]">
-        <div className="flex gap-[5px] items-center justify-center">
+        <div className="flex gap-[5px] items-center justify-center select-none">
           <HiOutlineLocationMarker className="w-5 h-5" />
           <span className="text-md text-primary font-bold">
             Based in Seoul, Korea
@@ -38,14 +38,24 @@ const Links = () => {
         </div>
       </section>
       <section className="flex gap-[10px]">
-        <div className={CONTACT_STYLE}>
+        <a
+          href="https://github.com/redberry0217"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={CONTACT_STYLE}
+        >
           <FiGithub className="w-5 h-5" />
           <span className="text-md">Github</span>
-        </div>
-        <div className={CONTACT_STYLE}>
+        </a>
+        <a
+          href="https://voyager999.tistory.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={CONTACT_STYLE}
+        >
           <SiTistory className="w-5 h-5" />
           <span className="text-md">Blog</span>
-        </div>
+        </a>
       </section>
     </main>
   );
