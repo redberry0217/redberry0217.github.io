@@ -6,6 +6,11 @@
 html,
 body {
   color: #2e2e2e;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.02em;
 }
 div,
 span,
@@ -53,7 +58,13 @@ dt,
 dd,
 ol,
 ul,
-li,
+li {
+  ::marker {
+    color: #aea3e6;
+    font-size: 0.9em;
+  }
+}
+
 fieldset,
 form,
 label,
