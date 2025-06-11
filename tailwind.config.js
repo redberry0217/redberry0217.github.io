@@ -11,6 +11,10 @@ export default {
         light2: "#d1f1ff",
         divider: "#d4d1e5",
       },
+      screens: {
+        mobile: { max: "1000px" },
+        desktop: { min: "1001px" },
+      },
     },
   },
   plugins: [

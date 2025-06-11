@@ -32,7 +32,7 @@ const OtherExperience = () => {
               href="https://velog.io/@redberry0217/posts"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-secondary transition-colors duration-300"
+              className="underline hover:text-secondary transition-colors duration-300 font-bold"
             >
               70개 이상의 학습 블로그
             </a>
@@ -44,7 +44,7 @@ const OtherExperience = () => {
               href="https://mmeasy.kr"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-secondary transition-colors duration-300"
+              className="underline hover:text-secondary transition-colors duration-300 font-bold"
             >
               최종프로젝트
             </a>

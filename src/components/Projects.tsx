@@ -1,3 +1,4 @@
+import ColoredText from "./ui/ColoredText";
 import Divider from "./ui/Divider";
 import Spacer from "./ui/Spacer";
 import TextChip from "./ui/TextChip";
@@ -39,14 +40,24 @@ const Projects = () => {
               가능한 '지금 바로 시작하기' 기능을 새롭게 개발했습니다.
             </span>
             <span className="text-lg leading-[1.5]">
-              빠른 시작 기능인만큼 간결하고 직관적인 액션 플로우를 구현하는 데
-              초점을 맞춰 채팅형 인터페이스를 통해 사용자에게 개인화된 경험을
-              제공하면서 신청 프로세스를 쉽게 따라갈 수 있도록 설계했습니다.
+              빠른 시작 기능인만큼{" "}
+              <ColoredText text="간결하고 직관적인 액션 플로우" />를 구현하는 데
+              초점을 맞춰{" "}
+              <ColoredText
+                text="채팅형 인터페이스를 통해 사용자에게 개인화된 경험을
+              제공"
+              />
+              하면서 신청 프로세스를 쉽게 따라갈 수 있도록 설계했습니다.
             </span>
             <span className="text-lg leading-[1.5]">
-              개발 과정에서 고민한 주요 지점은, 사용자의 입력값과 인터페이스
-              상태를 효율적으로 관리하며, 앞뒤로 페이지를 이동하거나 로그인 후
-              리디렉션 될 때도 데이터가 유실되지 않도록 보장하는 방법이었습니다.
+              개발 과정에서 고민한 주요 지점은,{" "}
+              <ColoredText
+                text="사용자의 입력값과 인터페이스
+              상태를 효율적으로 관리"
+              />
+              하며, 앞뒤로 페이지를 이동하거나 로그인 후 리디렉션 될 때도{" "}
+              <ColoredText text="데이터가 유실되지 않도록 보장" />
+              하는 방법이었습니다.
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
@@ -90,8 +101,12 @@ const Projects = () => {
             <span className="text-lg leading-[1.5]">
               리포트 작성은 과정이 길고 응답 항목이 많아 작성 도중 데이터가
               유실되거나 사용자가 현재 진행 상황을 직관적으로 파악하기 어려울 수
-              있습니다. 이에 임시저장, 불러오기, 진행상황 표시, 문항 비활성화
-              토글 기능을 구현하여 작성 흐름을 최적화했습니다.
+              있습니다. 이에{" "}
+              <ColoredText
+                text="임시저장, 불러오기, 진행상황 표시, 문항 비활성화
+              토글 기능"
+              />
+              을 구현하여 작성 흐름을 최적화했습니다.
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
@@ -102,9 +117,8 @@ const Projects = () => {
                 <li>
                   isFinal값 활용하여 작성 내용을 서버에 임시저장, 최초 렌더링시
                   useEffect로 저장 데이터 불러오거나 저장 내용이 없는 경우
-                  초기화
+                  초기화, 입력값 제한과 유효성 검증으로 데이터 안정성 강화
                 </li>
-                <li>입력값 제한과 유효성 검증으로 데이터 안정성 강화</li>
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
@@ -126,11 +140,18 @@ const Projects = () => {
           <div className="flex flex-col gap-[10px]">
             <span className="text-lg leading-[1.5]">
               사용자 경험을 최우선으로 고려해 주요 기능을 구현했습니다. 멘토
-              필터링에서는 사용자가 어떤 조건으로 검색해야 자신의 니즈에
-              부합하는 결과를 얻을 수 있을지를 중점적으로 고민했습니다. 또한,
-              멘토 리스트와 상세 페이지에서 관심 있는 멘토를 북마크하고, 북마크
-              페이지에서 이를 한눈에 모아서 볼 수 있도록 구현해 사용자 편의성을
-              높였습니다.
+              필터링에서는 사용자가{" "}
+              <ColoredText
+                text="어떤 조건으로 검색해야 자신의 니즈에
+              부합하는 결과를 얻을 수 있을지"
+              />
+              를 중점적으로 고민했습니다. 또한, 멘토 리스트와 상세 페이지에서
+              관심 있는 멘토를 북마크하고,{" "}
+              <ColoredText
+                text="북마크
+              페이지에서 이를 한눈에 모아서 볼 수 있도록 구현"
+              />
+              해 사용자 편의성을 높였습니다.
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
@@ -169,9 +190,13 @@ const Projects = () => {
               증진시키는 고객센터 페이지와 관리자 페이지를 개발했습니다.
               고객센터 페이지에 있는 공지사항이나 자주묻는질문(FAQ)는 관리자
               페이지에서 작성, 등록, 삭제, 공개 설정이 가능합니다. 특히 관리자
-              페이지는 권한이 있는 사용자만 접근할 수 있도록 제어하고, 세션을
-              안정적으로 유지하는 것이 중요했습니다. 관리자 페이지 기능 기획과
-              구현을 현재까지 진행 중에 있습니다.
+              페이지는{" "}
+              <ColoredText
+                text="권한이 있는 사용자만 접근할 수 있도록 제어하고, 세션을
+              안정적으로 유지"
+              />
+              하는 것이 중요했습니다. 관리자 페이지 기능 기획과 구현을 현재까지
+              진행 중에 있습니다.
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
@@ -201,7 +226,7 @@ const Projects = () => {
                 </li>
                 <li>
                   API 호출 응답으로 accessToken을 받고, refreshToken은 쿠키에
-                  저장하여 로그인 유지지
+                  저장하여 로그인 유지
                 </li>
                 <li>
                   별도 디자인 없이 Headless UI 활용하여 통일성 있는 UI를
@@ -285,7 +310,7 @@ const Projects = () => {
               <a
                 href="https://drive.google.com/file/d/16hzDt-Ets0zEcPZNXJb4SEU3URnYKHI5/view?usp=sharing"
                 target="_blank"
-                className="underline hover:text-secondary transition-colors duration-300"
+                className="underline hover:text-secondary transition-colors duration-300 font-bold"
               >
                 유저테스트 보고서
               </a>{" "}
@@ -306,15 +331,15 @@ const Projects = () => {
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  정규화 원칙을 지켜 효율적이고 직관적인 데이터 관리가
-                  가능하도록 퀴즈집(quizzes), 문제(questions), 선택지(options)를
-                  각각의 테이블로 관리하고, 외래키로 연결
+                  <ColoredText text="정규화 원칙을 지켜 효율적이고 직관적인 데이터 관리" />
+                  가 가능하도록 퀴즈집(quizzes), 문제(questions),
+                  선택지(options)를 각각의 테이블로 관리하고, 외래키로 연결
                 </li>
                 <li>
-                  안정적인 퀴즈 생성을 보장하기 위해 문제와 선택지의 최대/최소
-                  개수를 제한, 꼼꼼한 유효성 검증을 통해 안정성 확보, 사용자의
-                  부담을 줄이고 레이아웃 일관성을 유지하기 위해 이미지 미첨부 시
-                  기본 이미지 적용
+                  <ColoredText text="안정적인 퀴즈 생성을 보장" />
+                  하기 위해 문제와 선택지의 최대/최소 개수를 제한, 꼼꼼한 유효성
+                  검증을 통해 안정성 확보, 사용자의 부담을 줄이고 레이아웃
+                  일관성을 유지하기 위해 이미지 미첨부 시 기본 이미지 적용
                 </li>
                 <li>
                   퀴즈 작성 입력 데이터는 단일 페이지 내에서만 사용된 후
@@ -326,18 +351,21 @@ const Projects = () => {
               <span className="text-lg font-bold">다국어 설정 토글 구현</span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  단순 영어/한국어 전환만 필요하고, 라우팅이나 고급 국제화
-                  기능이 필요하지 않은 간단한 요구사항에 따라 외부 라이브러리
-                  사용하지 않고 키-값 언어쌍 상수를 활용해 커스텀 훅으로 구현
+                  <ColoredText text="단순 영어/한국어 전환만 필요" />
+                  하고, 라우팅이나 고급 국제화 기능이 필요하지 않은 간단한
+                  요구사항에 따라 외부 라이브러리 사용하지 않고{" "}
+                  <ColoredText text="키-값 언어쌍 상수를 활용해 커스텀 훅" />
+                  으로 구현
                 </li>
                 <li>
                   전역으로 관리하는 상태가 언어 설정과 로그인 상태 두 가지만
-                  있어서 Zustand보다 가볍고 보일러플레이트가 더 적은 Jotai를
-                  채용, Atom으로 설정 관리
+                  있어서{" "}
+                  <ColoredText text="Zustand보다 가볍고 보일러플레이트가 더 적은 Jotai" />
+                  를 채용, Atom으로 설정 관리
                 </li>
                 <li>
-                  새로고침 시 언어 설정 유지를 위해 클라이언트와 서버 모두에서
-                  접근 가능한 쿠키에 설정을 저장
+                  <ColoredText text="새로고침 시 언어 설정 유지" />를 위해
+                  클라이언트와 서버 모두에서 접근 가능한 쿠키에 설정을 저장
                 </li>
               </span>
             </div>
@@ -346,8 +374,12 @@ const Projects = () => {
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   리액트 훅으로 직접 구현하는 것보다 캐싱 및 에러 처리, 로딩
-                  상태 관리 등을 용이하게 해주는 useInfiniteQuery로 무한스크롤
-                  적용하여 데이터 로딩 시간 분산
+                  상태 관리 등을 용이하게 해주는{" "}
+                  <ColoredText
+                    text="useInfiniteQuery로 무한스크롤
+                  적용"
+                  />
+                  하여 데이터 로딩 시간 분산
                 </li>
               </span>
             </div>
@@ -358,9 +390,11 @@ const Projects = () => {
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   오디오는 브라우저 환경에서 사용자의 상호작용으로 처리되어
-                  Next.js의 서버사이드 렌더링 환경에서 다루기 어려운 문제 →
-                  클라이언트 컴포넌트에서 클릭하여 오디오 객체를 생성하거나,
-                  브라우저 환경임을 확인 한 후 오디오 객체를 생성하도록 구현
+                  Next.js의 서버사이드 렌더링 환경에서 다루기 어려운 문제 →{" "}
+                  <ColoredText text="클라이언트 컴포넌트" />
+                  에서 클릭하여 오디오 객체를 생성하거나,{" "}
+                  <ColoredText text="브라우저 환경" />
+                  임을 확인 한 후 오디오 객체를 생성 하도록 구현
                 </li>
               </span>
             </div>
@@ -370,15 +404,16 @@ const Projects = () => {
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  유저테스트 피드백 현황판 만들어 관리, 약 100개 피드백 중 37개
+                  유저테스트 피드백 현황판 만들어 관리,{" "}
+                  <ColoredText text="약 100개 피드백 중 37개" />
                   반영하여 사용자 경험 향상
                 </li>
                 <li>
                   레이아웃 쉬프트 개선, 접근성 개선, gif 로딩 이미지 크기 축소
                 </li>
                 <li>
-                  프로젝트 중반 Lighthouse 기준 퍼포먼스 41, 접근성 87 → 최종
-                  퍼포먼스 93, 접근성 94로 개선
+                  프로젝트 중반 Lighthouse 기준 퍼포먼스 41, 접근성 87 → 최종{" "}
+                  <ColoredText text="퍼포먼스 93, 접근성 94" />로 개선
                 </li>
               </span>
             </div>

@@ -1,3 +1,4 @@
+import ColoredText from "./ui/ColoredText";
 import Spacer from "./ui/Spacer";
 import TextChip from "./ui/TextChip";
 
@@ -27,8 +28,12 @@ const WorkExperience = () => {
             <span className="text-lg leading-[1.5]">
               의류 제품의 라벨에 있는 DPP QR 코드 스캔 시 사용자가 접속하는 랜딩
               페이지를 개발했습니다. 다양한 브랜드의 확장을 염두에 두어, 많은
-              페이지를 쉽고 일관적으로 개발할 수 있도록 JSON 구조를 설계하고,
-              이를 파싱해 컴포넌트 단위로 렌더링하는 시스템을 구현했습니다.
+              페이지를 쉽고 일관적으로 개발할 수 있도록{" "}
+              <ColoredText
+                text="JSON 구조를 설계하고,
+              이를 파싱해 컴포넌트 단위로 렌더링"
+              />
+              하는 시스템을 구현했습니다.
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
