@@ -1,12 +1,13 @@
 import { Toaster } from "react-hot-toast";
 import Links from "./components/Links";
-import WorkExperience from "./components/WorkExperience";
 import Title from "./components/Title";
 import Spacer from "./components/ui/Spacer";
 import MainLayout from "./layout/MainLayout";
-import Projects from "./components/Projects";
 import OtherExperience from "./components/OtherExperience";
 import LastEdited from "./components/LastEdited";
+import Winterview from "./components/Winterview";
+import Mmeasy from "./components/Mmeasy";
+import Education from "./components/Education";
 
 function App() {
   return (
@@ -18,11 +19,13 @@ function App() {
         <Links />
       </div>
       <Spacer height={80} />
-      <WorkExperience />
+      <Winterview />
       <Spacer height={80} />
-      <Projects />
+      <Mmeasy />
       <Spacer height={80} />
       <OtherExperience />
+      <Spacer height={80} />
+      <Education />
       <Spacer height={80} />
       <LastEdited />
       <Spacer height={80} />

@@ -6,7 +6,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 const Links = () => {
   const CONTACT_STYLE =
-    "cursor-pointer flex gap-[5px] items-center justify-center hover:bg-white rounded-full transition-colors px-2 py-1";
+    "cursor-pointer flex gap-[5px] items-center justify-center hover:bg-white rounded-[5px] transition-colors px-2 py-1";
 
   const handleClickPasteItem = (href: string) => {
     navigator.clipboard.writeText(href);
