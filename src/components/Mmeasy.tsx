@@ -1,7 +1,9 @@
+import { FaGithub } from "react-icons/fa";
 import ColoredText from "./ui/ColoredText";
 import Divider from "./ui/Divider";
 import Spacer from "./ui/Spacer";
 import TextChip from "./ui/TextChip";
+import { MdPlaylistAddCheckCircle } from "react-icons/md";
 
 const Mmeasy = () => {
   return (
@@ -27,6 +29,24 @@ const Mmeasy = () => {
               <br />
               2024. 04 - 2024. 05
             </span>
+          </div>
+          <div className="flex gap-[10px] items-center h-[30px]">
+            <a
+              href="https://github.com/mm-easy/mm-easy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[25px] h-[25px]"
+            >
+              <FaGithub className="w-full h-full" />
+            </a>
+            <a
+              href="https://ballistic-backpack-266.notion.site/easy-21141f26d76380f183fcfaa3ffc1c442"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[30px] h-[30px]"
+            >
+              <MdPlaylistAddCheckCircle className="w-full h-full" />
+            </a>
           </div>
         </div>
         {/* 오른쪽 영역 */}
@@ -72,7 +92,7 @@ const Mmeasy = () => {
           </div>
           <Divider gap={10} />
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[상세 내용]</span>
+            <span className="text-xl font-bold">[담당 역할]</span>
             <div className="flex flex-col gap-[10px] pb-[15px]">
               <span className="text-lg font-bold">
                 퀴즈 만들기 에디터 기능 개발
@@ -84,10 +104,10 @@ const Mmeasy = () => {
                   선택지(options)를 각각의 테이블로 관리하고, 외래키로 연결
                 </li>
                 <li>
-                  <ColoredText text="안정적인 퀴즈 생성을 보장" />
-                  하기 위해 문제와 선택지의 최대/최소 개수를 제한, 꼼꼼한 유효성
-                  검증을 통해 안정성 확보, 사용자의 부담을 줄이고 레이아웃
-                  일관성을 유지하기 위해 이미지 미첨부 시 기본 이미지 적용
+                  <ColoredText text="안정적인 퀴즈 생성을 보장" />ㄴ 하기 위해
+                  문제와 선택지의 최대/최소 개수를 제한, 꼼꼼한 유효성 검증을
+                  통해 안정성 확보, 사용자의 부담을 줄이고 레이아웃 일관성을
+                  유지하기 위해 이미지 미첨부 시 기본 이미지 적용
                 </li>
                 <li>
                   퀴즈 작성 입력 데이터는 단일 페이지 내에서만 사용된 후
