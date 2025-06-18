@@ -56,7 +56,7 @@ const OtherExperience = () => {
             <TextChip text="Figma" />
           </span>
         </div>
-        <Divider gap={10} />
+        <Divider gap={0} />
         <span className="text-2xl font-bold">
           내일배움캠프 React 6기 - 담임매니저 (Assistant PM)
         </span>
@@ -71,20 +71,22 @@ const OtherExperience = () => {
           </span>
         </div>
       </div>
-      <Divider gap={30} />
+      <Divider gap={20} />
       <div className="flex flex-col gap-[25px]">
         <span className="text-2xl font-bold">(주)디브컴퍼니 - 기획팀 책임</span>
         <span className="text-xl font-bold">2021.09 - 2023.06</span>
         <div className="flex flex-col gap-[5px]">
-          <span className="text-lg font-bold">프로모션 랜딩페이지 기획</span>
+          <span className="text-lg font-bold">
+            프로모션 랜딩페이지 기획, 프로모션 집행, 보고
+          </span>
           <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
-            <li>고객사, 디자인팀, 개발팀과 소통 및 협업</li>
             <li>
-              기획 스토리보드 작성, 프로젝트 전체 일정 관리, 요구사항 정리, 오픈
-              전 테스트 수행, 오픈 후 구글애널리틱스 유저 행동 데이터 분석
+              금융, 제약, 가전 계열 고객사, 디자인팀, 개발팀과 긴밀히 소통 및
+              협업
             </li>
             <li>
-              방문자수, 이벤트별 클릭수, 클릭률 등 데이터 기반 보고서 작성
+              스토리보드 작성, 프로젝트 전체 일정 관리, 요구사항 정리, 오픈 전
+              테스트 수행, 오픈 후 구글애널리틱스 유저 행동 데이터 분석
             </li>
           </span>
         </div>
@@ -94,10 +96,9 @@ const OtherExperience = () => {
           </span>
           <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
             <li>
-              네이버, 카카오, 메타, 네트워크 매체, 지하철광고 등 다양한 매체
-              집행
+              렙사와 협업하여 네이버, 카카오, 메타, 네트워크 매체, 지하철광고 등
+              다양한 매체 집행
             </li>
-            <li>렙사와 협업하여 효율적인 광고 캠페인 운영</li>
           </span>
         </div>
         <div className="flex flex-col gap-[5px]">
@@ -105,10 +106,9 @@ const OtherExperience = () => {
             연간 프로모션 캠페인 기획 및 브랜드 소셜 미디어 운영
           </span>
           <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
-            <li>분기별 프로모션 기획, 예산 관리, 광고물 심의 진행</li>
             <li>
-              인플루언서 협업 및 바이럴 광고 집행, 월간 소셜 미디어 콘텐츠
-              캘린더 운영
+              분기별 프로모션 기획, 예산 관리, 광고물 심의 진행, 인플루언서
+              협업, 소셜 콘텐츠캘린더 운영
             </li>
           </span>
         </div>

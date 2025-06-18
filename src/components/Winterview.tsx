@@ -17,7 +17,8 @@ const Winterview = () => {
             className="underline text-2xl font-bold hover:text-secondary transition-colors duration-300"
             rel="noopener noreferrer"
           >
-            이기는 인터뷰
+            이기는 인터뷰, <br />
+            Winterview
           </a>
           <div className="flex flex-col">
             <span className="text-md leading-[1.2]">
@@ -28,7 +29,7 @@ const Winterview = () => {
           </div>
         </div>
         {/* 오른쪽 영역 */}
-        <div className="w-[80%] flex flex-col gap-[25px]">
+        <div className="w-[80%] flex flex-col gap-[20px]">
           <span className="text-lg leading-[1.5]">
             취업준비생이 경력 인증된 현직자와 실시간 모의면접, 이력서/포트폴리오
             리뷰, 커피챗을 통해 최종 합격을 준비할 수 있도록 돕고, 현직자에게는
@@ -36,9 +37,9 @@ const Winterview = () => {
             서비스입니다. 오픈된 서비스로 현재 포털에서도 검색 가능하며, 온라인
             마케팅 진행 중입니다.
           </span>
-          <Divider gap={10} />
+          <Divider gap={0} />
           <span className="text-2xl font-bold">
-            '지금 바로 이용하기(빠른 시작)' 개발
+            <ColoredText text="'지금 바로 이용하기' 개발" color="purple" />
           </span>
           <span className="text-xl font-bold">2025.04 - 2025.05</span>
           <div className="flex flex-col gap-[10px]">
@@ -53,9 +54,8 @@ const Winterview = () => {
               제공하면서 신청 프로세스를 쉽게 따라갈 수 있도록 설계했습니다.
             </span> */}
             <span className="text-lg leading-[1.5]">
-              메인 페이지에서 접근 가능한 '지금 바로 이용하기' 기능 개발 시
-              간결하고 직관적인 사용자 경험을 위해 채팅형 인터페이스를
-              설계했습니다. 주요 고민 지점은{" "}
+              간결하고 직관적인 사용자 경험을 위해 채팅형 인터페이스를 설계 및
+              구현했습니다. 주요 고민 지점은{" "}
               <ColoredText text="사용자 입력값과 UI 상태를 효율적으로 관리" />
               하고, 페이지를 이동이나 로그인 후에도{" "}
               <ColoredText text="데이터가 유실되지 않도록 보장" />
@@ -63,24 +63,23 @@ const Winterview = () => {
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[상세 내용]</span>
             <div className="flex flex-col gap-[10px] pb-[15px]">
               <span className="text-lg font-bold">
-                채팅형 UI/UX 구현을 위한 상태 관리 및 로직 처리
+                채팅 로그 상태 관리 및 동적 UI 렌더링
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  채팅 로그 UI 렌더링에 필요한 상태와 실제 사용자 입력값 관리에
-                  필요한 상태를 Zustand 전역 상태로 관리하여 페이지 이동 시에도
-                  기존 입력값과 채팅 로그가 유지되고 사용자가 흐름을 이어갈 수
-                  있도록 구현
+                  Zustand 전역 state로 사용자 입력값과 채팅 로그를 관리, 페이지
+                  이동 후 데이터 유실 없이 흐름 유지
                 </li>
                 <li>
                   사용자 응답에 따라 로그 state에 항목을 추가하며 채팅 로그가
-                  쌓이는 형태를 구현, 항목의 타입(Question, Answer)에 따라
-                  동적으로 말풍선 스타일 적용
+                  쌓이는 형태를 구현
                 </li>
-                <li>미답변 Question 중 id가 가장 낮은 항목을 하나만 표시</li>
+                <li>
+                  항목의 타입(Question, Answer)에 따라 동적으로 말풍선 스타일
+                  적용
+                </li>
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
@@ -89,32 +88,29 @@ const Winterview = () => {
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  버튼 비활성화, toast.error 활용하여 필수 항목 미응답 시 다음
-                  단계로 넘어갈 수 없도록 구현
+                  미응답 시 다음 단계로 넘어가지 못하도록 제한, 선택사항은
+                  건너뛸 수 있도록 구현해 사용성 향상
                 </li>
                 <li>
                   사용자가 응답을 수정하는 경우 해당 질문 이후의 로그 state를
                   초기화하여 응답이 중복되지 않도록 구현
                 </li>
-                <li>
-                  선택사항(파일 첨부, 전달사항 등)은 미응답 상태로 건너뛸 수
-                  있도록 구현하여 사용성 향상
-                </li>
               </span>
             </div>
-            <div className="flex flex-col gap-[10px] pb-[15px]">
+            <div className="flex flex-col gap-[10px]">
               <span className="text-lg font-bold">인증 및 결제 프로세스</span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  결제 단계에서 로그인 상태 확인, 로그인 후 로직상 메인 페이지로
-                  리디렉션 되는 문제가 있어 미리 pathname을 localStorage에
-                  저장하여 로그인 후 직전 화면으로 리디렉션 되도록 처리
+                  비로그인 시 pathname을 localStorage에 저장, 로그인 후 진행
+                  중이던 페이지로 리디렉션 되도록 처리
                 </li>
               </span>
             </div>
           </div>
-          <Divider gap={10} />
-          <span className="text-2xl font-bold">면접 리포트 작성/조회 개발</span>
+          <Divider gap={0} />
+          <span className="text-2xl font-bold">
+            <ColoredText text="면접 리포트 작성/조회 개발" color="purple" />
+          </span>
           <span className="text-xl font-bold">2024.09 - 2024.10</span>
           <div className="flex flex-col gap-[10px]">
             <span className="text-lg leading-[1.5]">
@@ -129,82 +125,50 @@ const Winterview = () => {
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[상세 내용]</span>
-            <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">리포트 작성 구현</span>
+            <div className="flex flex-col gap-[10px]">
+              <span className="text-lg font-bold">
+                작성 흐름을 최적화한 리포트 구현
+              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   최초 렌더링시 useEffect로 임시저장 데이터 불러오거나 저장
                   내용이 없는 경우 초기화
                 </li>
                 <li>
-                  최종 제출 전에 미응답 항목, 단답형 최소 답변 개수(2개), 필수
-                  선택값(최종합격여부) 검증하여 기준 미달 시 사용자에게 명확히
-                  안내, 데이터의 무결성 보장
+                  미응답 항목, 단답형 최소 답변 개수, 필수 선택값 검증 후 최종
+                  제출
                 </li>
-              </span>
-            </div>
-            <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">리포트 조회 구현</span>
-              <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  서버 데이터를 질문 타입(서술형, 단답형, 선택형,
-                  최종합격여부)에 따라 필터링하여 직관적인 UI 구현
+                  제출 후 router.replace() 통해 라우팅, 작성페이지로 재접근 제한
                 </li>
               </span>
             </div>
           </div>
-          <Divider gap={10} />
+          <Divider gap={0} />
           <span className="text-2xl font-bold">
-            사용자 맞춤형 기능 설계 밎 구현
+            <ColoredText text="사용자 편의성 개선 기능 개발" color="purple" />
           </span>
           <span className="text-xl font-bold">2024.09 - 2025.10</span>
           <div className="flex flex-col gap-[10px]">
             <span className="text-lg leading-[1.5]">
-              사용자 경험을 최우선으로 고려해 주요 기능을 구현했습니다. 멘토
-              필터링에서는 사용자가{" "}
-              <ColoredText
-                text="어떤 조건으로 검색해야 자신의 니즈에
-              부합하는 결과를 얻을 수 있을지"
-              />
-              를 중점적으로 고민했습니다. 또한, 멘토 리스트와 상세 페이지에서
-              관심 있는 멘토를 북마크하고,{" "}
-              <ColoredText
-                text="북마크
-              페이지에서 이를 한눈에 모아서 볼 수 있도록 구현"
-              />
-              해 사용자 편의성을 높였습니다.
+              멘토 필터링, 북마크, 멘토 등록 알림받기, 리뷰 작성 등을 구현하며
+              사용자 편의성을 향상시켰습니다.
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[상세 내용]</span>
-            <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">
-                멘토 검색 필터링, 멘토 북마크 기능
-              </span>
+            <div className="flex flex-col gap-[10px]">
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+                <li>필터 조건 추가/변경/삭제가 유연한 필터링 동작 구현</li>
                 <li>
-                  실시간 검색 입력 시 성능 저하 및 사용자 경험 저하 가능성이
-                  있으므로, 디바운싱 적용해 불필요한 API 호출을 줄이고 검색
-                  성능을 개선
+                  회사명 실시간 검색 시 debounce 적용해 불필요한 API 호출 방지
                 </li>
-                <li>
-                  북마크 추가/삭제 시 인터페이스에 지연이 발생하거나 데이터
-                  불일치 문제를 방지하여 안정적인 경험을 제공하기 위해 낙관적
-                  업데이트 적용
-                </li>
-              </span>
-            </div>
-            <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">마이페이지</span>
-              <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
-                <li>(멘티)서비스 이용 후 리뷰 작성 기능, (멘토)정산 리스트</li>
+                <li>단순 북마크 개발 후 낙관적 업데이트 적용하여 기능 개선</li>
               </span>
             </div>
           </div>
-          <Divider gap={10} />
+          <Divider gap={0} />
           <span className="text-2xl font-bold">
-            운영 및 관리 기능 설계 및 구현
+            <ColoredText text="운영/관리 기능 설계 및 구현" color="purple" />
           </span>
           <span className="text-xl font-bold">2024.11 - 진행중</span>
           <div className="flex flex-col gap-[10px]">
@@ -219,20 +183,17 @@ const Winterview = () => {
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[상세 내용]</span>
             <div className="flex flex-col gap-[10px] pb-[15px]">
               <span className="text-lg font-bold">고객센터 페이지</span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  데이터 양이 많아질 경우를 고려하여 페이지네이션 적용하여
-                  데이터를 단계적으로 불러오도록 구현, 공지 상세 페이지에서 뒤로
-                  가기 시 사용자가 보고 있던 페이지를 유지하기 위해 쿼리
-                  파라미터 활용해 상태 관리
+                  공지사항 Pagination 적용 시 쿼리 파라미터 활용하여 보고 있던
+                  페이지 유지
                 </li>
                 <li>
-                  문의하기 페이지에서 첨부파일 업로드 시 보안과 서버 부하 문제를
-                  해결하기 위해 서버가 발급한 presignedUrl을 활용하여
-                  클라이언트가 S3에 파일을 업로드하도록 구현
+                  문의하기 파일 첨부 시 보안 문제와 서버 부하를 방지하기 위해
+                  서버가 발급한 presignedUrl을 활용하여 클라이언트가 S3에 파일을
+                  업로드하도록 구현
                 </li>
               </span>
             </div>
@@ -246,7 +207,7 @@ const Winterview = () => {
                 <li>
                   API 호출 응답에서 받은 accessToken으로 인증을 수행,
                   refreshToken은 쿠키에 저장해 세션 유효 기간 동안 자동으로
-                  갱신하도록 구현현
+                  갱신하도록 구현
                 </li>
                 <li>
                   별도 디자인 없이 Headless UI 활용하여 통일성 있는 UI를
@@ -254,11 +215,11 @@ const Winterview = () => {
                 </li>
               </span>
             </div>
-            <Divider gap={10} />
+            <Divider gap={0} />
           </div>
           <div className="flex flex-col gap-[10px]">
             <span className="text-xl font-bold">[성과 및 배운점]</span>
-            <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+            <span className="flex flex-col gap-[5px] text-lg leading-[1.5] pb-[15px]">
               <li>
                 다양한 문제를 정의하고, 이를 해결하기 위한 최적의 기술 스택과
                 로직 설계 경험

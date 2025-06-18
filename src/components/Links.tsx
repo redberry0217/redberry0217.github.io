@@ -3,6 +3,7 @@ import { MdOutlineEmail, MdOutlinePhoneIphone } from "react-icons/md";
 import { SiTistory } from "react-icons/si";
 import toast from "react-hot-toast";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { LuNotebook } from "react-icons/lu";
 
 const Links = () => {
   const CONTACT_STYLE =
@@ -55,6 +56,15 @@ const Links = () => {
         >
           <SiTistory className="w-5 h-5" />
           <span className="text-md">Blog</span>
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1Hc58y6Po_2iv795vURFhn8IFvK7mJz0k/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={CONTACT_STYLE}
+        >
+          <LuNotebook className="w-5 h-5" />
+          <span className="text-md">Portfolio</span>
         </a>
       </section>
     </main>

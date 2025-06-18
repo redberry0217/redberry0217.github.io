@@ -37,7 +37,7 @@ const Education = () => {
           </span>
         </div>
       </div>
-      <Divider gap={30} />
+      <Divider gap={20} />
       <div className="flex flex-col gap-[25px]">
         <span className="text-2xl font-bold">
           London School of Business and Finance - Postgraduate Course 수료
@@ -53,7 +53,7 @@ const Education = () => {
           </span>
         </div>
       </div>
-      <Divider gap={30} />
+      <Divider gap={20} />
       <div className="flex flex-col gap-[25px]">
         <span className="text-2xl font-bold">
           안동대학교 사범대학 영어교육과 졸업

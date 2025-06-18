@@ -13,22 +13,22 @@ function App() {
   return (
     <MainLayout>
       <Toaster position="top-center" />
-      <Spacer height={80} />
+      <Spacer height={60} />
       <div className="bg-gray-100 p-4 rounded-lg">
         <Title />
         <Links />
       </div>
-      <Spacer height={80} />
+      <Spacer height={60} />
       <Winterview />
-      <Spacer height={80} />
+      <Spacer height={60} />
       <Mmeasy />
-      <Spacer height={80} />
+      <Spacer height={60} />
       <OtherExperience />
-      <Spacer height={80} />
+      <Spacer height={60} />
       <Education />
-      <Spacer height={80} />
+      <Spacer height={60} />
       <LastEdited />
-      <Spacer height={80} />
+      <Spacer height={60} />
     </MainLayout>
   );
 }

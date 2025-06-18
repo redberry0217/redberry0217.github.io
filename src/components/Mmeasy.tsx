@@ -53,10 +53,10 @@ const Mmeasy = () => {
         <div className="w-[80%] flex flex-col gap-[25px]">
           <div className="flex flex-col gap-[10px]">
             <span className="text-lg leading-[1.5]">
-              React 트랙 최종프로젝트로, 외국인을 위한 한국어 학습 서비스입니다.
-              퀴즈 만들기 에디터를 통해 직접 퀴즈를 만들어 공유하고 산성비
-              타자연습 게임에 도전하며 재미있게 공부할 수 있습니다. 팀장으로서
-              기능 구현 외 일정 관리, 회의 주도, 디자이너 협업, 업무 분담,{" "}
+              React 트랙 최종프로젝트로, 퀴즈 만들기 에디터를 통해 직접 퀴즈를
+              만들어 공유하고 산성비 타자연습 게임에 도전하며 한국어를 공부하는
+              서비스입니다. 팀장으로서 기능 구현 외 일정 관리, 회의 주도,
+              디자이너 협업, 업무 분담,{" "}
               <a
                 href="https://ballistic-backpack-266.notion.site/easy-21141f26d76380f183fcfaa3ffc1c442"
                 target="_blank"
@@ -90,12 +90,15 @@ const Mmeasy = () => {
               때문에 적절한 오디오 컨트롤 기능도 필요했습니다.
             </span>
           </div>
-          <Divider gap={10} />
+          <Divider gap={0} />
           <div className="flex flex-col gap-[10px]">
             <span className="text-xl font-bold">[담당 역할]</span>
             <div className="flex flex-col gap-[10px] pb-[15px]">
               <span className="text-lg font-bold">
-                퀴즈 만들기 에디터 기능 개발
+                <ColoredText
+                  text="퀴즈 만들기 에디터 기능 개발"
+                  color="purple"
+                />
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
@@ -104,10 +107,10 @@ const Mmeasy = () => {
                   선택지(options)를 각각의 테이블로 관리하고, 외래키로 연결
                 </li>
                 <li>
-                  <ColoredText text="안정적인 퀴즈 생성을 보장" />ㄴ 하기 위해
-                  문제와 선택지의 최대/최소 개수를 제한, 꼼꼼한 유효성 검증을
-                  통해 안정성 확보, 사용자의 부담을 줄이고 레이아웃 일관성을
-                  유지하기 위해 이미지 미첨부 시 기본 이미지 적용
+                  <ColoredText text="안정적인 퀴즈 생성을 보장" />
+                  하기 위해 문제와 선택지의 최대/최소 개수를 제한, 꼼꼼한 유효성
+                  검증을 통해 안정성 확보, 사용자의 부담을 줄이고 레이아웃
+                  일관성을 유지하기 위해 이미지 미첨부 시 기본 이미지 적용
                 </li>
                 <li>
                   퀴즈 작성 입력 데이터는 단일 페이지 내에서만 사용된 후
@@ -116,7 +119,9 @@ const Mmeasy = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">다국어 설정 토글 구현</span>
+              <span className="text-lg font-bold">
+                <ColoredText text="다국어 설정 토글 구현" color="purple" />
+              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   단순 영어/한국어 전환만 필요하고, 라우팅이나 고급 국제화
@@ -137,7 +142,9 @@ const Mmeasy = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">퀴즈 리스트 페이지</span>
+              <span className="text-lg font-bold">
+                <ColoredText text="퀴즈 리스트 페이지" color="purple" />
+              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   리액트 훅으로 직접 구현하는 것보다 캐싱 및 에러 처리, 로딩
@@ -149,7 +156,10 @@ const Mmeasy = () => {
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
               <span className="text-lg font-bold">
-                한글 자모 학습 페이지 & 산성비 게임 오디오 처리
+                <ColoredText
+                  text="한글 자모 학습 페이지 & 산성비 게임 오디오 처리"
+                  color="purple"
+                />
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
@@ -162,9 +172,12 @@ const Mmeasy = () => {
                 </li>
               </span>
             </div>
-            <div className="flex flex-col gap-[10px] pb-[15px]">
+            <div className="flex flex-col gap-[10px]">
               <span className="text-lg font-bold">
-                유저 테스트 피드백 반영 및 성능 개선
+                <ColoredText
+                  text="유저 테스트 피드백 반영 및 성능 개선"
+                  color="purple"
+                />
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
@@ -180,9 +193,10 @@ const Mmeasy = () => {
               </span>
             </div>
           </div>
+          <Divider gap={0} />
           <div className="flex flex-col gap-[10px]">
             <span className="text-xl font-bold">[성과 및 배운점]</span>
-            <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+            <span className="flex flex-col gap-[5px] text-lg leading-[1.5] pb-[15px]">
               <li>React 4기 트랙 최우수 프로젝트 선정</li>
               <li>
                 Next.js SSR 환경에서 브라우저 API 사용 방법 고민, SSR과 CSR,
