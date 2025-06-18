@@ -14,35 +14,40 @@ const OtherExperience = () => {
         <span className="text-xl font-bold">2025.03 - 2025.03</span>
         <div className="flex flex-col gap-[10px]">
           <span className="text-lg leading-[1.5]">
-            의류 제품의 라벨에 있는 DPP QR 코드 스캔 시 연결되는 랜딩 페이지를
-            개발하며 사용자 경험과 효율적인 페이지 확장성을 중점적으로
-            고려했습니다. 여러 브랜드의 특성을 반영한 유연하고 일관된 랜딩
-            페이지 시스템을 구축했습니다.
+            의류 제품의 라벨에 있는 디지털제품여권(DPP) QR 코드 스캔 시 연결되는
+            랜딩 페이지를 개발했습니다. 각각 다른 요구사항을 가진 수많은 브랜드
+            페이지를 일관적, 효율적으로 개발할 수 있는 시스템을 설계 및
+            개발했습니다.
           </span>
         </div>
         <div className="flex flex-col gap-[10px]">
           <span className="text-xl font-bold">[담당 역할]</span>
           <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
-            <li>협업 브랜드별 톤앤매너에 맞는 랜딩 페이지 디자인 및 개발</li>
             <li>
-              여러 페이지를 효율적으로 생성할 수 있는 동적 렌더링 시스템 설계
+              협업 브랜드별 톤앤매너에 맞는 랜딩 페이지 Figma 디자인 및 React
+              개발
             </li>
-            <li>반복적인 코드 작성 최소화 및 확장 가능한 공통 컴포넌트 개발</li>
-            <li>예외 처리와 스타일링 문제를 개선하여 코드의 유지보수성 강화</li>
+            <li>
+              여러 페이지를 쉽게 생성할 수 있는 JSON 구조 기반 렌더링 시스템
+              설계
+            </li>
+            <li>
+              반복적인 코드 작성 최소화, 확장/재사용 가능한 공통 컴포넌트 개발,
+              기존 컴포넌트 개선
+            </li>
           </span>
         </div>
         <div className="flex flex-col gap-[10px]">
           <span className="text-xl font-bold">[성과 및 배운점]</span>
           <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
             <li>
-              업무 몰입도, 원활한 커뮤니케이션 능력, 문제 발견 및 개선 역량 우수
-              평가
+              업무 몰입도, 원활한 커뮤니케이션 능력, 문제 발견 및 개선 역량에서
+              좋은 평가를 받음
             </li>
             <li>
               유연하고 확장 가능하며 협업과 사용성을 고려한 공통 컴포넌트 개발
               경험
             </li>
-            <li>요구사항 분석 및 협업 능력 강화</li>
           </span>
         </div>
         <div className="flex flex-col gap-[10px]">
@@ -77,7 +82,7 @@ const OtherExperience = () => {
         <span className="text-xl font-bold">2021.09 - 2023.06</span>
         <div className="flex flex-col gap-[5px]">
           <span className="text-lg font-bold">
-            프로모션 랜딩페이지 기획, 프로모션 집행, 보고
+            랜딩페이지 개발 기획, 프로모션 캠페인 기획, 집행, 보고
           </span>
           <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
             <li>
@@ -99,16 +104,9 @@ const OtherExperience = () => {
               렙사와 협업하여 네이버, 카카오, 메타, 네트워크 매체, 지하철광고 등
               다양한 매체 집행
             </li>
-          </span>
-        </div>
-        <div className="flex flex-col gap-[5px]">
-          <span className="text-lg font-bold">
-            연간 프로모션 캠페인 기획 및 브랜드 소셜 미디어 운영
-          </span>
-          <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
             <li>
-              분기별 프로모션 기획, 예산 관리, 광고물 심의 진행, 인플루언서
-              협업, 소셜 콘텐츠캘린더 운영
+              광고 기획, 예산 관리, 광고물 심의 진행, 인플루언서 협업, 브랜드
+              소셜미디어 콘텐츠 운영
             </li>
           </span>
         </div>

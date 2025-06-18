@@ -1,3 +1,4 @@
+import { IoArrowRedoCircleSharp } from "react-icons/io5";
 import ColoredText from "./ui/ColoredText";
 import Divider from "./ui/Divider";
 import Spacer from "./ui/Spacer";
@@ -26,6 +27,16 @@ const Winterview = () => {
               <br />
               2024. 08 - 진행중
             </span>
+          </div>
+          <div className="flex gap-[10px] items-center h-[30px]">
+            <a
+              href="https://winterview.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[30px] h-[30px]"
+            >
+              <IoArrowRedoCircleSharp className="w-full h-full" />
+            </a>
           </div>
         </div>
         {/* 오른쪽 영역 */}
@@ -64,7 +75,7 @@ const Winterview = () => {
           </div>
           <div className="flex flex-col gap-[10px]">
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">
+              <span className="text-lg font-bold bg-light w-fit">
                 채팅 로그 상태 관리 및 동적 UI 렌더링
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
@@ -83,7 +94,7 @@ const Winterview = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">
+              <span className="text-lg font-bold bg-light w-fit">
                 사용자의 응답 선택 및 입력 처리
               </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
@@ -98,7 +109,9 @@ const Winterview = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px]">
-              <span className="text-lg font-bold">인증 및 결제 프로세스</span>
+              <span className="text-lg font-bold bg-light w-fit">
+                인증 및 결제 프로세스
+              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   비로그인 시 pathname을 localStorage에 저장, 로그인 후 진행
@@ -126,9 +139,6 @@ const Winterview = () => {
           </div>
           <div className="flex flex-col gap-[10px]">
             <div className="flex flex-col gap-[10px]">
-              <span className="text-lg font-bold">
-                작성 흐름을 최적화한 리포트 구현
-              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
                   최초 렌더링시 useEffect로 임시저장 데이터 불러오거나 저장
@@ -184,34 +194,39 @@ const Winterview = () => {
           </div>
           <div className="flex flex-col gap-[10px]">
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">고객센터 페이지</span>
+              <span className="text-lg font-bold bg-light w-fit">
+                고객센터 페이지
+              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  공지사항 Pagination 적용 시 쿼리 파라미터 활용하여 보고 있던
-                  페이지 유지
+                  공지사항 <ColoredText text="Pagination" /> 적용 시 쿼리
+                  파라미터 활용, 상세페이지에서 돌아와도 보고 있던 페이지 유지
                 </li>
                 <li>
                   문의하기 파일 첨부 시 보안 문제와 서버 부하를 방지하기 위해
-                  서버가 발급한 presignedUrl을 활용하여 클라이언트가 S3에 파일을
-                  업로드하도록 구현
+                  서버가 발급한 <ColoredText text="presignedUrl" />을 활용하여
+                  클라이언트가 S3에 파일을 업로드하도록 구현
                 </li>
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold">관리자 페이지</span>
+              <span className="text-lg font-bold bg-light w-fit">
+                관리자 페이지
+              </span>
               <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
                 <li>
-                  최상위 layout에 로그인 상태와 사용자 역할을 확인 후 권한이
-                  없는 경우 리디렉션 처리하는 커스텀 훅
+                  <ColoredText text="최상위 layout" />에 로그인 상태와 사용자
+                  역할을 확인 후 권한이 없는 경우 리디렉션 처리하는 커스텀 훅
                 </li>
                 <li>
-                  API 호출 응답에서 받은 accessToken으로 인증을 수행,
-                  refreshToken은 쿠키에 저장해 세션 유효 기간 동안 자동으로
-                  갱신하도록 구현
+                  API 호출 응답에서 받은 <ColoredText text="accessToken" />
+                  으로 인증을 수행,
+                  <ColoredText text="refreshToken" />은 쿠키에 저장해 세션 유효
+                  기간 동안 자동으로 갱신하도록 구현
                 </li>
                 <li>
-                  별도 디자인 없이 Headless UI 활용하여 통일성 있는 UI를
-                  효율적으로 구현
+                  별도 디자인 없이 <ColoredText text="Headless UI" /> 활용하여
+                  통일성 있는 UI를 효율적으로 구현
                 </li>
               </span>
             </div>
@@ -229,8 +244,8 @@ const Winterview = () => {
                 상호작용하며 데이터 흐름 관리
               </li>
               <li>
-                로컬/전역 state 관리와 Tanstack Query를 활용한 데이터 캐싱,
-                에러처리, 쿼리 키 설계에 대한 이해도 향상, 데이터의 최신성을
+                로컬/전역 state 관리와 Tanstack Query를 활용한 데이터 캐싱, 에러
+                처리, Query Key 설계에 대한 이해도 향상, 데이터의 최신성을
                 보장하면서 반복적인 API 호출을 줄여 성능 최적화
               </li>
               <li>
