@@ -68,7 +68,7 @@ const Winterview = () => {
               간결하고 직관적인 사용자 경험을 위해 채팅형 인터페이스를 설계 및
               구현했습니다. 주요 고민 지점은{" "}
               <ColoredText text="사용자 입력값과 UI 상태를 효율적으로 관리" />
-              하고, 페이지를 이동이나 로그인 후에도{" "}
+              하고, 페이지 이동이나 로그인 후에도{" "}
               <ColoredText text="데이터가 유실되지 않도록 보장" />
               하는 것이었습니다. 이를 위해 다음과 같은 접근을 시도했습니다.
             </span>
@@ -220,9 +220,8 @@ const Winterview = () => {
                 </li>
                 <li>
                   API 호출 응답에서 받은 <ColoredText text="accessToken" />
-                  으로 인증을 수행,
-                  <ColoredText text="refreshToken" />은 쿠키에 저장해 세션 유효
-                  기간 동안 자동으로 갱신하도록 구현
+                  으로 인증을 수행, <ColoredText text="refreshToken" />은 쿠키에
+                  저장해 세션 유효 기간 동안 자동으로 갱신하도록 구현
                 </li>
                 <li>
                   별도 디자인 없이 <ColoredText text="Headless UI" /> 활용하여
