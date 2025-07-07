@@ -4,13 +4,17 @@ import Spacer from "./ui/Spacer";
 const Education = () => {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-primary">Education</h2>
-      <Spacer height={30} />
+      <h2 className="text-3xl font-bold text-primary mb:text-xl mb:bg-gradient-to-r mb:from-light mb:to-light2 mb:rounded-[5px] mb:px-2 mb:mt-10">
+        Education
+      </h2>
+      <Spacer height={30} className="mb:hidden" />
       <div className="flex flex-col gap-[25px]">
-        <span className="text-2xl font-bold">내일배움캠프 React 4기 수료</span>
-        <span className="text-xl font-bold">2023.12 - 2024.05</span>
+        <span className="text-2xl font-bold mb:text-lg mb:mt-5">
+          내일배움캠프 React 4기 수료
+        </span>
+        <span className="text-xl font-bold mb:text-sm">2023.12 - 2024.05</span>
         <div className="flex flex-col gap-[10px]">
-          <span className="text-lg leading-[1.5]">
+          <span className="text-lg leading-[1.5] mb:text-sm">
             어려움도 많았지만 많은 것을 배우고 귀한 인연을 만나게 된 경험입니다.{" "}
             <a
               href="https://velog.io/@redberry0217/posts"
@@ -39,12 +43,12 @@ const Education = () => {
       </div>
       <Divider gap={20} />
       <div className="flex flex-col gap-[25px]">
-        <span className="text-2xl font-bold">
+        <span className="text-2xl font-bold mb:text-lg">
           London School of Business and Finance - Postgraduate Course 수료
         </span>
-        <span className="text-xl font-bold">2019.09 - 2019.12</span>
+        <span className="text-xl font-bold mb:text-sm">2019.09 - 2019.12</span>
         <div className="flex flex-col gap-[10px]">
-          <span className="text-lg leading-[1.5]">
+          <span className="text-lg leading-[1.5] mb:text-sm">
             영국 런던 Holborn 소재 비즈니스 스쿨(LSBF)에서 Marketing, Management
             과정을 수료했습니다. Digital Marketing, Content Marketing SEO,
             International Business, Business Technique Development 등 4개 과목을
@@ -55,10 +59,10 @@ const Education = () => {
       </div>
       <Divider gap={20} />
       <div className="flex flex-col gap-[25px]">
-        <span className="text-2xl font-bold">
+        <span className="text-2xl font-bold mb:text-lg">
           안동대학교 사범대학 영어교육과 졸업
         </span>
-        <span className="text-xl font-bold">2008.03 - 2013.08</span>
+        <span className="text-xl font-bold mb:text-sm">2008.03 - 2013.08</span>
       </div>
     </section>
   );

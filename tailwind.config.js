@@ -12,8 +12,9 @@ export default {
         divider: "#d4d1e5",
       },
       screens: {
-        mobile: { max: "1000px" },
-        desktop: { min: "1001px" },
+        mb: { max: "600px" },
+        tb: { max: "1000px" },
+        dt: { min: "1001px" },
       },
     },
   },

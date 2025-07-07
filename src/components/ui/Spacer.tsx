@@ -1,5 +1,11 @@
-const Spacer = ({ height }: { height: number }) => {
-  return <div style={{ height: `${height}px` }} />;
+const Spacer = ({
+  height,
+  className,
+}: {
+  height: number;
+  className?: string;
+}) => {
+  return <div style={{ height: `${height}px` }} className={className} />;
 };
 
 export default Spacer;

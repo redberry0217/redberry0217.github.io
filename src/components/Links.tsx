@@ -7,7 +7,7 @@ import { LuNotebook } from "react-icons/lu";
 
 const Links = () => {
   const CONTACT_STYLE =
-    "cursor-pointer flex gap-[5px] items-center justify-center hover:bg-white rounded-[5px] transition-colors px-2 py-1";
+    "cursor-pointer flex gap-[5px] items-center justify-center hover:bg-white rounded-[5px] transition-colors px-2 py-1 mb:px-0 mb:py-0";
 
   const handleClickPasteItem = (href: string) => {
     navigator.clipboard.writeText(href);
@@ -16,10 +16,10 @@ const Links = () => {
 
   return (
     <main className="flex gap-[5px] pt-[30px] text-md justify-between">
-      <section className="flex gap-[10px]">
+      <section className="flex gap-[10px] mb:flex-col mb:gap-[5px] mb:items-start">
         <div className="flex gap-[5px] items-center justify-center select-none">
-          <HiOutlineLocationMarker className="w-5 h-5" />
-          <span className="text-md text-primary font-bold">
+          <HiOutlineLocationMarker className="w-5 h-5 mb:hidden" />
+          <span className="text-md text-primary font-bold mb:text-sm">
             Based in Seoul, Korea
           </span>
         </div>
@@ -27,18 +27,18 @@ const Links = () => {
           className={CONTACT_STYLE}
           onClick={() => handleClickPasteItem("redberry0217@gmail.com")}
         >
-          <MdOutlineEmail className="w-5 h-5" />
-          <span className="text-md">redberry0217@gmail.com</span>
+          <MdOutlineEmail className="w-5 h-5 mb:hidden" />
+          <span className="text-md mb:text-sm">redberry0217@gmail.com</span>
         </div>
         <div
           className={CONTACT_STYLE}
           onClick={() => handleClickPasteItem("010-7511-6128")}
         >
-          <MdOutlinePhoneIphone className="w-5 h-5" />
-          <span className="text-md">010-7511-6128</span>
+          <MdOutlinePhoneIphone className="w-5 h-5 mb:hidden" />
+          <span className="text-md mb:text-sm">010-7511-6128</span>
         </div>
       </section>
-      <section className="flex gap-[10px]">
+      <section className="flex gap-[10px] mb:items-end">
         <a
           href="https://github.com/redberry0217"
           target="_blank"
@@ -46,7 +46,7 @@ const Links = () => {
           className={CONTACT_STYLE}
         >
           <FiGithub className="w-5 h-5" />
-          <span className="text-md">Github</span>
+          <span className="text-md mb:hidden">Github</span>
         </a>
         <a
           href="https://voyager999.tistory.com/"
@@ -55,7 +55,7 @@ const Links = () => {
           className={CONTACT_STYLE}
         >
           <SiTistory className="w-5 h-5" />
-          <span className="text-md">Blog</span>
+          <span className="text-md mb:hidden">Blog</span>
         </a>
         <a
           href="https://drive.google.com/file/d/1Hc58y6Po_2iv795vURFhn8IFvK7mJz0k/view"
@@ -64,7 +64,7 @@ const Links = () => {
           className={CONTACT_STYLE}
         >
           <LuNotebook className="w-5 h-5" />
-          <span className="text-md">Portfolio</span>
+          <span className="text-md mb:hidden">Portfolio</span>
         </a>
       </section>
     </main>

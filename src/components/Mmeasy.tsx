@@ -9,21 +9,23 @@ import { IoArrowRedoCircleSharp } from "react-icons/io5";
 const Mmeasy = () => {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-primary">Project</h2>
-      <Spacer height={30} />
-      <div className="flex gap-[40px]">
+      <h2 className="text-3xl font-bold text-primary mb:text-xl mb:bg-gradient-to-r mb:from-light mb:to-light2 mb:rounded-[5px] mb:px-2 mb:mt-10">
+        Project
+      </h2>
+      <Spacer height={30} className="mb:hidden" />
+      <div className="flex gap-[40px] mb:flex-col mb:gap-[20px]">
         {/* 왼쪽 영역 */}
-        <div className="w-[20%] flex flex-col gap-[25px] select-none">
+        <div className="w-[20%] flex flex-col gap-[25px] select-none mb:w-full mb:gap-[15px] mb:border mb:border-gray-200 mb:rounded-[5px] mb:p-3 mb:mt-5">
           <a
             href="https://mmeasy.kr"
             target="_blank"
-            className="underline text-2xl font-bold hover:text-secondary transition-colors duration-300"
+            className="underline text-2xl font-bold hover:text-secondary transition-colors duration-300 mb:text-lg"
             rel="noopener noreferrer"
           >
             뭔말easy?
           </a>
           <div className="flex flex-col">
-            <span className="text-md leading-[1.2]">
+            <span className="text-md leading-[1.2] mb:text-sm">
               팀장
               <br />
               프론트엔드 개발
@@ -59,9 +61,9 @@ const Mmeasy = () => {
           </div>
         </div>
         {/* 오른쪽 영역 */}
-        <div className="w-[80%] flex flex-col gap-[25px]">
+        <div className="w-[80%] flex flex-col gap-[25px] mb:w-full">
           <div className="flex flex-col gap-[10px]">
-            <span className="text-lg leading-[1.5]">
+            <span className="text-lg leading-[1.5] mb:text-sm">
               React 트랙 최종프로젝트로, 퀴즈 만들기 에디터를 통해 직접 퀴즈를
               만들어 공유하고 산성비 타자연습 게임으로 한국어를 공부하는
               서비스입니다. 팀장으로서 기능 구현 외 일정 관리, 회의 주도,
@@ -95,12 +97,12 @@ const Mmeasy = () => {
           </div>
           <Divider gap={0} />
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[담당 역할]</span>
+            <span className="text-xl font-bold mb:text-sm">[담당 역할]</span>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold bg-light w-fit">
+              <span className="text-lg font-bold bg-light w-fit mb:text-sm">
                 <ColoredText text="퀴즈 만들기 에디터 기능 개발" />
               </span>
-              <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+              <span className="flex flex-col gap-[5px] text-lg leading-[1.5] mb:text-sm">
                 <li>
                   <ColoredText text="정규화 원칙" />에 맞게 퀴즈집, 문제, 객관식
                   선택지를 각각의 테이블로 분리하여 데이터 관리 최적화
@@ -117,10 +119,10 @@ const Mmeasy = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold bg-light w-fit">
+              <span className="text-lg font-bold bg-light w-fit mb:text-sm">
                 <ColoredText text="다국어 설정 토글 구현" />
               </span>
-              <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+              <span className="flex flex-col gap-[5px] text-lg leading-[1.5] mb:text-sm">
                 <li>
                   간단한 한국어/영어 전환 요구사항에 맞춰 라이브러리 없이{" "}
                   <ColoredText text="커스텀 훅" />
@@ -137,10 +139,10 @@ const Mmeasy = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px] pb-[15px]">
-              <span className="text-lg font-bold bg-light w-fit">
+              <span className="text-lg font-bold bg-light w-fit mb:text-sm">
                 <ColoredText text="한글 자모 학습 페이지 & 산성비 게임 오디오 처리" />
               </span>
-              <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+              <span className="flex flex-col gap-[5px] text-lg leading-[1.5] mb:text-sm">
                 <li>
                   Next.js SSR 환경에서 오디오 처리 문제 →{" "}
                   <ColoredText text="클라이언트 컴포넌트" />,{" "}
@@ -149,10 +151,10 @@ const Mmeasy = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[10px]">
-              <span className="text-lg font-bold bg-light w-fit">
+              <span className="text-lg font-bold bg-light w-fit mb:text-sm">
                 <ColoredText text="유저 테스트 피드백 반영 및 성능 개선" />
               </span>
-              <span className="flex flex-col gap-[5px] text-lg leading-[1.5]">
+              <span className="flex flex-col gap-[5px] text-lg leading-[1.5] mb:text-sm">
                 <li>
                   유저테스트 피드백 현황판 운영,{" "}
                   <ColoredText text="약 100개 피드백 중 37개" /> 반영
@@ -172,8 +174,10 @@ const Mmeasy = () => {
           </div>
           <Divider gap={0} />
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[성과 및 배운점]</span>
-            <span className="flex flex-col gap-[5px] text-lg leading-[1.5] pb-[15px]">
+            <span className="text-xl font-bold mb:text-sm">
+              [성과 및 배운점]
+            </span>
+            <span className="flex flex-col gap-[5px] text-lg leading-[1.5] pb-[15px] mb:text-sm">
               <li>
                 React 4기 트랙 <ColoredText text="최우수 프로젝트" /> 선정
               </li>
@@ -195,16 +199,16 @@ const Mmeasy = () => {
             </span>
           </div>
           <div className="flex flex-col gap-[10px]">
-            <span className="text-xl font-bold">[기술 스택]</span>
-            <span className="flex gap-[7px]">
-              <TextChip text="Next.js" />
-              <TextChip text="TypeScript" />
-              <TextChip text="Jotai" />
-              <TextChip text="Tailwind CSS" />
-              <TextChip text="Tanstack Query" />
-              <TextChip text="Figma" />
-              <TextChip text="Jira" />
-              <TextChip text="Supabase" />
+            <span className="text-xl font-bold mb:text-sm">[기술 스택]</span>
+            <span className="flex gap-[7px] mb:flex-wrap">
+              <TextChip text="Next.js" type="mb" />
+              <TextChip text="TypeScript" type="mb" />
+              <TextChip text="Jotai" type="mb" />
+              <TextChip text="Tailwind CSS" type="mb" />
+              <TextChip text="Tanstack Query" type="mb" />
+              <TextChip text="Figma" type="mb" />
+              <TextChip text="Jira" type="mb" />
+              <TextChip text="Supabase" type="mb" />
             </span>
           </div>
         </div>

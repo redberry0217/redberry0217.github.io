@@ -5,7 +5,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <ProgressBar />
       <div className="w-full h-full flex flex-col items-center justify-center">
-        <div className="w-[1000px]">{children}</div>
+        <div className="dt:w-[1000px] tb:w-full tb:px-5 mb:w-full mb:px-5">
+          {children}
+        </div>
       </div>
       <ProgressBar />
     </>
